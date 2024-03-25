@@ -1,0 +1,429 @@
+[
+  {
+    "title": "drinks",
+    "categories": [
+      {
+        "title": "Hot Drinks",
+        "description": "Various hot beverages",
+        "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/crop-0e799878-0593-4d2e-85f3-5de0fad7cd25.jpeg",
+        "meals": {
+          "create": [
+            {
+              "title": "Tea",
+              "description": "Hot tea",
+              "price": 2.5,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/564ce8fe-c237-49da-b5b0-c82563ef72fe.jpeg"
+            },
+            {
+              "title": "Coffee",
+              "description": "Freshly brewed coffee",
+              "price": 3.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/crop-71f2f3fc-45ca-4c95-9e9e-3a2c9624cb60.jpeg"
+            },
+            {
+              "title": "Latte",
+              "description": "Creamy latte",
+              "price": 3.5,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/crop-71f2f3fc-45ca-4c95-9e9e-3a2c9624cb60.jpeg"
+            },
+            {
+              "title": "Cappuccino",
+              "description": "Rich cappuccino",
+              "price": 3.5,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/crop-71f2f3fc-45ca-4c95-9e9e-3a2c9624cb60.jpeg"
+            },
+            {
+              "title": "Hot Chocolate",
+              "description": "Decadent hot chocolate",
+              "price": 4.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/crop-71f2f3fc-45ca-4c95-9e9e-3a2c9624cb60.jpeg"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Juices",
+        "description": "Refreshing fruit juices",
+        "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/939254233824642.jpeg",
+        "meals": {
+          "create": [
+            {
+              "title": "Apple Juice",
+              "description": "Freshly squeezed apple juice",
+              "price": 3.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/253311218199474.jpeg"
+            },
+            {
+              "title": "Mango Juice",
+              "description": "Sweet mango nectar",
+              "price": 3.5,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/253311218199474.jpeg"
+            },
+            {
+              "title": "Orange Juice",
+              "description": "Tangy orange juice",
+              "price": 3.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/253311218199474.jpeg"
+            },
+            {
+              "title": "Pineapple Juice",
+              "description": "Refreshing pineapple juice",
+              "price": 3.5,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/253311218199474.jpeg"
+            },
+            {
+              "title": "Mixed Berry Smoothie",
+              "description": "Healthy mixed berry smoothie",
+              "price": 4.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/1566152524838410.jpeg"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Cold Drinks",
+        "description": "Refreshing cold beverages",
+        "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/dfbcd2ef-fa85-48cd-a674-70effd34ad94.jpeg",
+        "meals": {
+          "create": [
+            {
+              "title": "Iced Tea",
+              "description": "Refreshing iced tea",
+              "price": 2.5,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/4b48f2f6-1e18-431d-9020-79cdc9096bb6.jpeg"
+            },
+            {
+              "title": "Iced Coffee",
+              "description": "Chilled iced coffee",
+              "price": 3.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/4b48f2f6-1e18-431d-9020-79cdc9096bb6.jpeg"
+            },
+            {
+              "title": "Lemonade",
+              "description": "Classic lemonade",
+              "price": 3.5,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/4b48f2f6-1e18-431d-9020-79cdc9096bb6.jpeg"
+            },
+            {
+              "title": "Soda",
+              "description": "Refreshing soda",
+              "price": 2.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/4b48f2f6-1e18-431d-9020-79cdc9096bb6.jpeg"
+            },
+            {
+              "title": "Fruit Punch",
+              "description": "Fruity fruit punch",
+              "price": 3.5,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/4b48f2f6-1e18-431d-9020-79cdc9096bb6.jpeg"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Cocktails",
+        "description": "Refreshing cocktails to enjoy",
+        "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/ab29fcc3-9ad1-4677-8afc-3c9dbce338a6.jpeg",
+        "meals": {
+          "create": [
+            {
+              "title": "Margarita",
+              "description": "Classic margarita with a twist",
+              "price": 8.5,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/ab29fcc3-9ad1-4677-8afc-3c9dbce338a6.jpeg"
+            },
+            {
+              "title": "Mockito",
+              "description": "Refreshing minty mojito",
+              "price": 7.5,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/ab29fcc3-9ad1-4677-8afc-3c9dbce338a6.jpeg"
+            },
+            {
+              "title": "Cosmopolitan",
+              "description": "Sophisticated cosmopolitan cocktail",
+              "price": 9.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/ab29fcc3-9ad1-4677-8afc-3c9dbce338a6.jpeg"
+            },
+            {
+              "title": "Pina Colada",
+              "description": "Tropical pina colada delight",
+              "price": 8.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/ab29fcc3-9ad1-4677-8afc-3c9dbce338a6.jpeg"
+            },
+            {
+              "title": "Long Island Iced Tea",
+              "description": "Strong and refreshing Long Island iced tea",
+              "price": 10.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/ab29fcc3-9ad1-4677-8afc-3c9dbce338a6.jpeg"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "menu",
+    "categories": [
+      {
+        "title": "Breakfasts",
+        "description": "Delicious breakfast options to start your day",
+        "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/644859568635411.jpeg",
+        "meals": {
+          "create": [
+            {
+              "title": "Classic Pancakes",
+              "description": "Fluffy pancakes served with maple syrup",
+              "price": 6.5,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/e41fb520-4002-486e-a887-dfbe89dd5d21.jpeg"
+            },
+            {
+              "title": "Eggs Benedict",
+              "description": "Perfectly poached eggs on toasted English muffins with ham and hollandaise sauce",
+              "price": 9.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/e41fb520-4002-486e-a887-dfbe89dd5d21.jpeg"
+            },
+            {
+              "title": "Avocado Toast",
+              "description": "Sliced avocado on toasted bread with poached eggs and cherry tomatoes",
+              "price": 8.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/3551010642510109255.jpeg"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Salads",
+        "description": "Healthy and refreshing salad options",
+        "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/022368053296618.jpeg",
+        "meals": {
+          "create": [
+            {
+              "title": "Caesar Salad",
+              "description": "Crisp romaine lettuce, croutons, and Parmesan cheese tossed in Caesar dressing",
+              "price": 8.5,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/2992859510512134.jpeg"
+            },
+            {
+              "title": "Greek Salad",
+              "description": "Fresh cucumber, tomato, red onion, feta cheese, and olives tossed in Greek dressing",
+              "price": 7.5,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/2992859510512134.jpeg"
+            },
+            {
+              "title": "Caprese Salad",
+              "description": "Sliced tomatoes, fresh mozzarella, and basil drizzled with balsamic glaze",
+              "price": 9.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/2992859510512134.jpeg"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Soups",
+        "description": "Comforting soup options for any time of the day",
+        "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/93441006119910226.jpeg",
+        "meals": {
+          "create": [
+            {
+              "title": "Tomato Basil Soup",
+              "description": "Rich and creamy tomato soup with fresh basil",
+              "price": 6.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/1058344133184065.jpeg"
+            },
+            {
+              "title": "Chicken Noodle Soup",
+              "description": "Classic chicken noodle soup with carrots, celery, and tender chicken",
+              "price": 7.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/1058344133184065.jpeg"
+            },
+            {
+              "title": "Butternut Squash Soup",
+              "description": "Smooth and velvety butternut squash soup with a hint of nutmeg",
+              "price": 6.5,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/1058344133184065.jpeg"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Fish",
+        "description": "Fresh and flavorful fish dishes",
+        "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/238756865735269.jpeg",
+        "meals": {
+          "create": [
+            {
+              "title": "Grilled Salmon",
+              "description": "Perfectly grilled salmon fillet with lemon and dill sauce",
+              "price": 12.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/82c800ab-7919-436a-9012-745d452fd76e.jpeg"
+            },
+            {
+              "title": "Fish Tacos",
+              "description": "Crispy fish tacos served with cabbage slaw and avocado crema",
+              "price": 10.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/82c800ab-7919-436a-9012-745d452fd76e.jpeg"
+            },
+            {
+              "title": "Lemon Garlic Shrimp",
+              "description": "Sautéed shrimp with garlic, butter, and lemon served over rice",
+              "price": 11.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/82c800ab-7919-436a-9012-745d452fd76e.jpeg"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Desserts",
+        "description": "Indulgent desserts to satisfy your sweet cravings",
+        "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/0dbae4d0-6485-48eb-90cc-1fb667b59a7d.jpeg",
+        "meals": {
+          "create": [
+            {
+              "title": "Chocolate Lava Cake",
+              "description": "Decadent chocolate cake with a molten chocolate center",
+              "price": 7.5,
+              "imageUrl": "https://example.com/chocolate_lava_cake.jpg"
+            },
+            {
+              "title": "New York Cheesecake",
+              "description": "Creamy cheesecake with a graham cracker crust",
+              "price": 8.0,
+              "imageUrl": "https://example.com/new_york_cheesecake.jpg"
+            },
+            {
+              "title": "Tiramisu",
+              "description": "Classic Italian tiramisu with layers of espresso-soaked ladyfingers and mascarpone cream",
+              "price": 9.0,
+              "imageUrl": "https://example.com/tiramisu.jpg"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Child Menu",
+        "description": "Delicious and kid-friendly meals for the little ones",
+        "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/65104235041032729.jpeg",
+        "meals": {
+          "create": [
+            {
+              "title": "Chicken Nuggets",
+              "description": "Crispy chicken nuggets served with fries",
+              "price": 5.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/989485c0-22f2-43f3-a991-68961b8c73b4.jpeg"
+            },
+            {
+              "title": "Cheese Pizza",
+              "description": "Classic cheese pizza with tomato sauce and mozzarella cheese",
+              "price": 6.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/989485c0-22f2-43f3-a991-68961b8c73b4.jpeg"
+            },
+            {
+              "title": "Macaroni and Cheese",
+              "description": "Creamy macaroni and cheese made with cheddar cheese",
+              "price": 4.5,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/989485c0-22f2-43f3-a991-68961b8c73b4.jpeg"
+            },
+            {
+              "title": "Peanut Butter and Jelly Sandwich",
+              "description": "A classic peanut butter and jelly sandwich served with carrot sticks",
+              "price": 3.5,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/989485c0-22f2-43f3-a991-68961b8c73b4.jpeg"
+            },
+            {
+              "title": "Fish Sticks",
+              "description": "Crispy fish sticks served with tartar sauce",
+              "price": 5.5,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/3107100797698514.jpeg"
+            },
+            {
+              "title": "Spaghetti with Meatballs",
+              "description": "Spaghetti pasta topped with homemade meatballs and marinara sauce",
+              "price": 6.5,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/3107100797698514.jpeg"
+            },
+            {
+              "title": "Mini Corn Dogs",
+              "description": "Miniature corn dogs served with ketchup",
+              "price": 4.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/3107100797698514.jpeg"
+            },
+            {
+              "title": "Grilled Cheese Sandwich",
+              "description": "Buttery grilled cheese sandwich served with tomato soup",
+              "price": 4.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/10164651009470011.jpeg"
+            },
+            {
+              "title": "Chicken Quesadilla",
+              "description": "Grilled chicken and cheese folded in a flour tortilla",
+              "price": 5.0,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/10164651009470011.jpeg"
+            },
+            {
+              "title": "French Toast Sticks",
+              "description": "Golden brown French toast sticks served with maple syrup",
+              "price": 4.5,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/10164651009470011.jpeg"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Meat Meals",
+        "description": "Satisfying meat dishes for meat lovers",
+        "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/9024347109148751.jpeg",
+        "meals": {
+          "create": [
+            {
+              "title": "Steak",
+              "description": "Juicy sirloin steak cooked to perfection",
+              "price": 15.99,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/314829656449698.jpeg"
+            },
+            {
+              "title": "BBQ Ribs",
+              "description": "Tender pork ribs slow-cooked and basted with BBQ sauce",
+              "price": 14.99,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/314829656449698.jpeg"
+            },
+            {
+              "title": "Grilled Chicken Breast",
+              "description": "Grilled chicken breast seasoned with herbs and spices",
+              "price": 12.99,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/314829656449698.jpeg"
+            },
+            {
+              "title": "Beef Burger",
+              "description": "Classic beef burger with lettuce, tomato, and cheese",
+              "price": 10.99,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/314829656449698.jpeg"
+            },
+            {
+              "title": "Pork Chop",
+              "description": "Succulent pork chop grilled and served with mashed potatoes",
+              "price": 13.99,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/1018728748239847.jpeg"
+            },
+            {
+              "title": "Lamb Shank",
+              "description": "Tender lamb shank braised with red wine and rosemary",
+              "price": 16.99,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/1018728748239847.jpeg"
+            },
+            {
+              "title": "Beef Stroganoff",
+              "description": "Beef strips cooked in a creamy mushroom sauce served over egg noodles",
+              "price": 14.99,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/1018728748239847.jpeg"
+            },
+            {
+              "title": "Chicken Parmesan",
+              "description": "Breaded chicken breast topped with marinara sauce and melted cheese",
+              "price": 12.99,
+              "imageUrl": "https://dyj6gt4964deb.cloudfront.net/images/1018728748239847.jpeg"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

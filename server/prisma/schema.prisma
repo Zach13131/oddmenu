@@ -1,0 +1,77 @@
+model Category {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  createdAt   DateTime @default(now())
+  imageUrl    String
+  tagId       String?
+  meals       Meal[]
+  tag         Tag?     @relation(fields: [tagId], references: [id])
+}
+
+model Meal {
+  id          String    @id @default(uuid())
+  title       String
+  description String
+  price       Int
+  imageUrl    String
+  categoryId  String
+  category    Category? @relation(fields: [categoryId], references: [id])
+
+  order     Order?      @relation(fields: [orderId], references: [id])
+  orderId   String?
+  orderItem OrderItem[]
+}
+
+model Admins {
+  id                 String @id @default(uuid())
+  login              String
+  password           String
+  role               Roles
+  hashedRefreshToken String
+}
+
+model Order {
+  id              String      @id @default(uuid())
+  totalCost       Int
+  userPhoneNumber String
+  status          OrderStatus
+  orderItems      OrderItem[]
+  createdAt       DateTime    @default(now())
+  meals           Meal[]
+}
+
+model OrderItem {
+  id           String @id @default(uuid())
+  mealId       String
+  mealQuantity Int
+  meal         Meal   @relation(fields: [mealId], references: [id])
+  orderId      String
+  order        Order  @relation(fields: [orderId], references: [id])
+}
+
+model Tag {
+  id         String     @id @default(uuid())
+  title      String
+  categories Category[]
+}
+
+enum OrderStatus {
+  PENDING
+  COMPLITED
+  REJECTED
+}
+
+enum Roles {
+  ADMIN
+  SUPER_ADMIN
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}

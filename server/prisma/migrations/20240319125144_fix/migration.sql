@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Category" ALTER COLUMN "createdAt" SET DEFAULT CURRENT_TIMESTAMP;
