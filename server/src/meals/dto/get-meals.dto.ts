@@ -17,11 +17,12 @@ export class GetMealDto {
       'Boolean indicating whether to include matches from the description field.',
     type: Boolean,
     required: false,
+    default: true,
   })
   @IsOptional()
   @Transform(({ value }) => value === 'true')
   @IsBoolean()
-  searchInDescription?: boolean;
+  searchInDescription?: boolean = true;
 
   @IsOptional()
   @IsEnum(SortOrder)

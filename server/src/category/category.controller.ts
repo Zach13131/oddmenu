@@ -6,11 +6,13 @@ import {
   Patch,
   Param,
   Delete,
+  Query,
 } from '@nestjs/common';
 import { CategoryService } from './category.service';
 import { CreateCategoryDto } from './dto/create-category.dto';
 import { UpdateCategoryDto } from './dto/update-category.dto';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
+import { GetCategoryDto } from './dto/get-category.dto';
 
 @ApiTags('category')
 @Controller('category')
@@ -24,8 +26,8 @@ export class CategoryController {
   }
 
   @Get()
-  findAll() {
-    return this.categoryService.findAll();
+  findAll(@Query() body: GetCategoryDto) {
+    return this.categoryService.findAll(body);
   }
 
   @Get(':id')
