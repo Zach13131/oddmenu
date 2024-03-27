@@ -15,8 +15,6 @@ import { ApiBearerAuth, ApiBody, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { AdminGuard } from 'src/guard/admin.guard';
 import { GetOrderDto } from './dto/get-orders.dto';
 
-@UseGuards(AdminGuard)
-@ApiBearerAuth()
 @ApiTags('orders')
 @Controller('orders')
 export class OrdersController {
@@ -29,16 +27,22 @@ export class OrdersController {
     return this.ordersService.create(createOrderDto);
   }
 
+  @UseGuards(AdminGuard)
+  @ApiBearerAuth()
   @Get()
   findAll(@Query() query: GetOrderDto) {
     return this.ordersService.findAll(query);
   }
 
+  @UseGuards(AdminGuard)
+  @ApiBearerAuth()
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.ordersService.findOne(id);
   }
 
+  @UseGuards(AdminGuard)
+  @ApiBearerAuth()
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateOrderDto: UpdateOrderDto) {
     return this.ordersService.update(id, updateOrderDto);

@@ -1,4 +1,8 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import {
+  BadRequestException,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { CreateAdminDto } from './dto/create-admin.dto';
 import { UpdateAdminDto } from './dto/update-admin.dto';
 import { PrismaService } from 'src/prisma/prisma.service';
@@ -52,14 +56,18 @@ export class AdminsService {
     return updatedAdmin;
   }
 
-  remove(id: string) {
-    const existingAdmin = this.prisma.admins.findFirst({ where: { id } });
+  async remove(id: string) {
+    const existingAdmin = await this.prisma.admins.findFirst({ where: { id } });
 
     if (!existingAdmin) {
       throw new NotFoundException('Admin not found');
     }
 
-    const removedAdmin = this.prisma.admins.delete({ where: { id } });
+    if (existingAdmin.role === Roles.SUPER_ADMIN) {
+      throw new BadRequestException('Super Admin could not be deleted');
+    }
+
+    const removedAdmin = await this.prisma.admins.delete({ where: { id } });
     return removedAdmin;
   }
 }

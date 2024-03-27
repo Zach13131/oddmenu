@@ -29,7 +29,7 @@ export class OrdersService {
       data: {
         totalCost,
         userPhoneNumber: createOrderDto.userPhoneNumber,
-        status: OrderStatus.PENDING,
+        status: OrderStatus.NEW,
         orderItems: {
           createMany: {
             data: createOrderDto.orderItems.map((item) => ({

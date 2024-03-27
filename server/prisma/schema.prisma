@@ -60,6 +60,7 @@ enum OrderStatus {
   PENDING
   COMPLITED
   REJECTED
+  NEW
 }
 
 enum Roles {

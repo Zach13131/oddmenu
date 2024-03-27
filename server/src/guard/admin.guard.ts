@@ -33,8 +33,9 @@ export class AdminGuard implements CanActivate {
       });
 
       const findUser = await this.prisma.admins.findFirst({
-        where: { login: user.login },
+        where: { id: user.id },
       });
+
       if (!findUser) throw new UnauthorizedException('Not authorized');
 
       req.user = {
