@@ -32,10 +32,6 @@ export class AuthController {
     @Req() req: Request,
     @Res({ passthrough: true }) res: Response,
   ) {
-    console.log(
-      'file: auth.controller.ts:27 ~ AuthController ~ req:',
-      req.cookies,
-    );
     const refreshToken = req.cookies?.refreshToken;
 
     if (!refreshToken)

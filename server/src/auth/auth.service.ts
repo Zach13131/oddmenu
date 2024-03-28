@@ -33,12 +33,6 @@ export class AuthService {
     if (!findUser) {
       throw new NotFoundException('User not found');
     }
-    const hashed_password: string = await bcrypt.hash(password, saltLength);
-
-    console.log(
-      'file: auth.service.ts:28 ~ AuthService ~ login ~ hashed_password:',
-      hashed_password,
-    );
 
     const isMatchPass = await bcrypt.compare(password, findUser.password);
 
