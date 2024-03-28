@@ -40,6 +40,9 @@ export class AdminGuard implements CanActivate {
 
       req.user = {
         id: findUser.id,
+        login: findUser.login,
+        name: findUser.name,
+        role: findUser.role,
       };
 
       return true;

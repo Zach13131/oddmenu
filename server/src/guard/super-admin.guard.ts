@@ -42,8 +42,12 @@ export class SuperAdminGuard implements CanActivate {
       if (findUser.role !== Roles.SUPER_ADMIN) {
         throw new ForbiddenException('Not allowed');
       }
+
       req.user = {
         id: findUser.id,
+        login: findUser.login,
+        name: findUser.name,
+        role: findUser.role,
       };
 
       return true;

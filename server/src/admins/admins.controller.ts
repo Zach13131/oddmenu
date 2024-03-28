@@ -7,6 +7,7 @@ import {
   Param,
   Delete,
   UseGuards,
+  Req,
 } from '@nestjs/common';
 import { AdminsService } from './admins.service';
 import { CreateAdminDto } from './dto/create-admin.dto';
@@ -29,6 +30,11 @@ export class AdminsController {
   @Get()
   findAll() {
     return this.adminsService.findAll();
+  }
+
+  @Get('me')
+  findOne(@Req() req: any) {
+    return req.user;
   }
 
   @Patch(':id')

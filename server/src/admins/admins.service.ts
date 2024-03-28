@@ -23,6 +23,7 @@ export class AdminsService {
     );
 
     const dataToSave = {
+      name: createAdminDto.name,
       login: createAdminDto.login,
       password: hashed_password,
       role: Roles.ADMIN,
