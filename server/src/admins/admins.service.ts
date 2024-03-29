@@ -1,5 +1,6 @@
 import {
   BadRequestException,
+  ForbiddenException,
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
@@ -39,7 +40,18 @@ export class AdminsService {
     return admins;
   }
 
-  async update(id: string, updateAdminDto: UpdateAdminDto) {
+  async update(
+    id: string,
+    updateAdminDto: UpdateAdminDto,
+    user: {
+      role: Roles;
+      id: string;
+    },
+  ) {
+    if (id !== user.id && user.role !== Roles.SUPER_ADMIN) {
+      throw new ForbiddenException('Not allowed');
+    }
+
     let hashed_password: string;
     if (updateAdminDto.password) {
       hashed_password = await bcrypt.hash(updateAdminDto.password, saltLength);
@@ -48,6 +60,7 @@ export class AdminsService {
     const dataToSave = {
       login: updateAdminDto.login,
       password: hashed_password,
+      name: updateAdminDto.name,
     };
 
     const updatedAdmin = this.prisma.admins.update({

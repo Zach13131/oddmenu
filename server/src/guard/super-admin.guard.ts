@@ -37,8 +37,10 @@ export class SuperAdminGuard implements CanActivate {
       const findUser = await this.prisma.admins.findFirst({
         where: { id: user.id },
       });
+
       if (!findUser) throw new UnauthorizedException('Not authorized');
 
+      console.log('%%%%%%%%%%%%%%%5');
       if (findUser.role !== Roles.SUPER_ADMIN) {
         throw new ForbiddenException('Not allowed');
       }

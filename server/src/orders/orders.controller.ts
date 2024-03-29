@@ -27,22 +27,22 @@ export class OrdersController {
     return this.ordersService.create(createOrderDto);
   }
 
-  @UseGuards(AdminGuard)
   @ApiBearerAuth()
+  @UseGuards(AdminGuard)
   @Get()
   findAll(@Query() query: GetOrderDto) {
     return this.ordersService.findAll(query);
   }
 
-  @UseGuards(AdminGuard)
   @ApiBearerAuth()
+  @UseGuards(AdminGuard)
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.ordersService.findOne(id);
   }
 
-  @UseGuards(AdminGuard)
   @ApiBearerAuth()
+  @UseGuards(AdminGuard)
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateOrderDto: UpdateOrderDto) {
     return this.ordersService.update(id, updateOrderDto);
