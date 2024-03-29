@@ -72,18 +72,27 @@ export class MealsService {
     return updatedMeal;
   }
 
-  async findAll(body: GetMealDto): Promise<Meal[]> {
+  async findAll(body: GetMealDto): Promise<{ data: Meal[]; count: number }> {
     const { title, searchInDescription, orderByPrice, offset, limit } = body;
 
     const findMealsQuery: any = {
+      where: {
+        isDeleted: false,
+      },
       skip: offset,
       take: limit,
+
+      include: {
+        category: {
+          select: {
+            title: true,
+            id: true,
+          },
+        },
+      },
     };
 
     if (title) {
-      findMealsQuery.where = {
-        isDeleted: false,
-      };
       findMealsQuery.where.OR = [];
       findMealsQuery.where.OR.push({
         title: {
@@ -107,9 +116,12 @@ export class MealsService {
         price: orderByPrice,
       };
     }
-
+    const count = await this.prisma.meal.count();
     const meals = await this.prisma.meal.findMany(findMealsQuery);
 
-    return meals;
+    return {
+      data: meals,
+      count,
+    };
   }
 }

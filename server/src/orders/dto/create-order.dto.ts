@@ -1,4 +1,10 @@
-import { IsArray, IsInt, IsString, ValidateNested } from 'class-validator';
+import {
+  IsArray,
+  IsInt,
+  IsOptional,
+  IsString,
+  ValidateNested,
+} from 'class-validator';
 import { Type } from 'class-transformer';
 
 class OrderItemDto {
@@ -16,4 +22,8 @@ export class CreateOrderDto {
 
   @IsString()
   userPhoneNumber: string;
+
+  @IsOptional()
+  @IsString()
+  address?: string;
 }
