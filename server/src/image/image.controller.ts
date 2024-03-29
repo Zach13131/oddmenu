@@ -10,7 +10,7 @@ import { ApiBearerAuth, ApiBody, ApiConsumes, ApiTags } from '@nestjs/swagger';
 import { extname } from 'path';
 import { diskStorage } from 'multer';
 
-const { BASE_URL, PORT } = process.env;
+const { BASE_URL } = process.env;
 
 @ApiBearerAuth()
 @ApiTags('image')
@@ -48,7 +48,7 @@ export class ImageController {
   uploadFile(@UploadedFile() file) {
     const imagePath = file.path;
 
-    const imageUrl = `${BASE_URL}:${PORT}/${imagePath.replace(/\\/g, '/')}`;
+    const imageUrl = `${BASE_URL}/${imagePath.replace(/\\/g, '/')}`;
 
     return { imagePath: imageUrl };
   }
