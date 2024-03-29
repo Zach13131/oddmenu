@@ -38,13 +38,13 @@ export class OrdersController {
   @UseGuards(AdminGuard)
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.ordersService.findOne(id);
+    return this.ordersService.findOne(+id);
   }
 
   @ApiBearerAuth()
   @UseGuards(AdminGuard)
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateOrderDto: UpdateOrderDto) {
-    return this.ordersService.update(id, updateOrderDto);
+    return this.ordersService.update(+id, updateOrderDto);
   }
 }

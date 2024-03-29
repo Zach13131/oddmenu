@@ -52,7 +52,7 @@ export class OrdersService {
   }
 
   async findAll(query: GetOrderDto) {
-    const { orderByOrderStatus } = query;
+    const { orderByOrderStatus, startDate, endDate } = query;
     const findOrderQuery: {
       include: {
         orderItems: true;
@@ -61,7 +61,8 @@ export class OrdersService {
         createdAt: 'desc';
       };
       where?: {
-        status: any;
+        status?: any;
+        createdAt?: any;
       };
     } = {
       include: {
@@ -71,6 +72,15 @@ export class OrdersService {
         createdAt: 'desc',
       },
     };
+    if (startDate && endDate) {
+      findOrderQuery.where = {
+        createdAt: {
+          gte: startDate,
+          lte: endDate,
+        },
+      };
+    }
+
     if (orderByOrderStatus) {
       findOrderQuery.where = {
         status: {
@@ -98,7 +108,7 @@ export class OrdersService {
     return ordersWithItemCount;
   }
 
-  async findOne(id: string) {
+  async findOne(id: number) {
     const order = await this.prisma.order.findUnique({
       where: { id },
       include: {
@@ -115,7 +125,7 @@ export class OrdersService {
     return order;
   }
 
-  async update(id: string, updateOrderDto: UpdateOrderDto) {
+  async update(id: number, updateOrderDto: UpdateOrderDto) {
     const existingOrder = await this.prisma.order.findUnique({
       where: { id },
     });

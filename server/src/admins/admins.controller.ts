@@ -39,10 +39,6 @@ export class AdminsController {
   @UseGuards(AdminGuard)
   @Get('me')
   findOne(@Req() req: any) {
-    console.log(
-      'file: admins.controller.ts:44 ~ AdminsController ~ findOne ~ req.user:',
-      req.user,
-    );
     return req.user;
   }
 

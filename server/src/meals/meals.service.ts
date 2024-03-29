@@ -60,9 +60,12 @@ export class MealsService {
       throw new NotFoundException('Meal not found');
     }
 
-    const updatedMeal = await this.prisma.meal.delete({
+    const updatedMeal = await this.prisma.meal.update({
       where: {
         id,
+      },
+      data: {
+        isDeleted: true,
       },
     });
 
@@ -70,12 +73,17 @@ export class MealsService {
   }
 
   async findAll(body: GetMealDto): Promise<Meal[]> {
-    const { title, searchInDescription, orderByPrice } = body;
+    const { title, searchInDescription, orderByPrice, offset, limit } = body;
 
-    const findMealsQuery: any = {};
+    const findMealsQuery: any = {
+      skip: offset,
+      take: limit,
+    };
 
     if (title) {
-      findMealsQuery.where = {};
+      findMealsQuery.where = {
+        isDeleted: false,
+      };
       findMealsQuery.where.OR = [];
       findMealsQuery.where.OR.push({
         title: {

@@ -19,8 +19,10 @@ model Meal {
   category    Category? @relation(fields: [categoryId], references: [id])
 
   order     Order?      @relation(fields: [orderId], references: [id])
-  orderId   String?
+  orderId   Int?
   orderItem OrderItem[]
+
+  isDeleted Boolean @default(false)
 }
 
 model Admins {
@@ -33,7 +35,7 @@ model Admins {
 }
 
 model Order {
-  id              String      @id @default(uuid())
+  id              Int         @id @default(autoincrement())
   totalCost       Int
   userPhoneNumber String
   status          OrderStatus
@@ -47,7 +49,7 @@ model OrderItem {
   mealId       String
   mealQuantity Int
   meal         Meal   @relation(fields: [mealId], references: [id])
-  orderId      String
+  orderId      Int
   order        Order  @relation(fields: [orderId], references: [id])
 }
 

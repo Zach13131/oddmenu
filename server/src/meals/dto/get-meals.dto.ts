@@ -1,6 +1,12 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { Transform } from 'class-transformer';
-import { IsBoolean, IsEnum, IsOptional, IsString } from 'class-validator';
+import {
+  IsBoolean,
+  IsEnum,
+  IsInt,
+  IsOptional,
+  IsString,
+} from 'class-validator';
 
 enum SortOrder {
   asc = 'asc',
@@ -27,4 +33,20 @@ export class GetMealDto {
   @IsOptional()
   @IsEnum(SortOrder)
   orderByPrice?: SortOrder;
+
+  @ApiProperty({
+    default: 12,
+  })
+  @Transform(({ value }) => +value)
+  @IsOptional()
+  @IsInt()
+  limit?: number = 12;
+
+  @ApiProperty({
+    default: 0,
+  })
+  @Transform(({ value }) => +value)
+  @IsOptional()
+  @IsInt()
+  offset?: number = 0;
 }
