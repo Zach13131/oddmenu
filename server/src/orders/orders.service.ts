@@ -29,6 +29,7 @@ export class OrdersService {
       data: {
         totalCost,
         userPhoneNumber: createOrderDto.userPhoneNumber,
+        address: createOrderDto.address,
         status: OrderStatus.NEW,
         orderItems: {
           createMany: {
