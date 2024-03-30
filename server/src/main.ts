@@ -7,7 +7,7 @@ import { join } from 'path';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import * as cookieParser from 'cookie-parser';
 
-const { PORT, ANY_ORIGIN, FRONTEND_URL } = process.env;
+const { PORT, ANY_ORIGIN, FRONTEND_URL, SECOND_FRONTEND_URL } = process.env;
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
@@ -34,9 +34,10 @@ async function bootstrap() {
   });
 
   app.enableCors({
-    origin: ANY_ORIGIN === 'true' ? true : FRONTEND_URL,
+    origin: ANY_ORIGIN === 'true' ? true : [FRONTEND_URL, SECOND_FRONTEND_URL],
     credentials: true,
   });
+
   app.use(cookieParser());
 
   await app.listen(PORT || 3000);
