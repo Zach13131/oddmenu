@@ -116,7 +116,14 @@ export class MealsService {
         price: orderByPrice,
       };
     }
-    const count = await this.prisma.meal.count();
+    const count = await this.prisma.meal.count({
+      where: {
+        title: {
+          contains: title,
+          mode: 'insensitive',
+        },
+      },
+    });
     const meals = await this.prisma.meal.findMany(findMealsQuery);
 
     return {
