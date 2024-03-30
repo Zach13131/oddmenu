@@ -7,9 +7,7 @@ import { join } from 'path';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import * as cookieParser from 'cookie-parser';
 
-const { PORT, ANY_ORIGIN, FRONTEND_URL, HERE } = process.env;
-
-console.log('file: main.ts:12 ~ HERE:', HERE);
+const { PORT, ANY_ORIGIN, FRONTEND_URL } = process.env;
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);

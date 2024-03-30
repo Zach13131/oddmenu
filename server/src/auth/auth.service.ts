@@ -61,11 +61,6 @@ export class AuthService {
   }
 
   async refreshToken(userId: string, refreshToken: string, res: Response) {
-    console.log(
-      'file: auth.service.ts:65 ~ AuthService ~ refreshToken ~ refreshToken:',
-      refreshToken,
-    );
-
     const decodedToken = await this.jwtService.verify(refreshToken, {
       secret: REFRESH_TOKEN_KEY,
     });

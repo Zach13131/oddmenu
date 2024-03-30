@@ -9,30 +9,7 @@ async function main() {
   const tags = JSON.parse(readFileSync('src/prisma/seeds/tags.json', 'utf-8'));
 
   const categoriesId = [];
-  // for (const category of categories) {
-  //   const res = await prisma.category.create({
-  //     data: {
-  //       ...category,
-  //       meals: {
-  //         create: [
-  //           {
-  //             title: 'meal',
-  //             description: 'description',
-  //             price: 102,
-  //             imageUrl: 'Uel',
-  //           },
-  //           {
-  //             title: 'meal2',
-  //             description: 'description',
-  //             price: 102,
-  //             imageUrl: 'Uel',
-  //           },
-  //         ],
-  //       },
-  //     },
-  //   });
-  //   categoriesId.push(res.id);
-  // }
+
   for (const tag of tags) {
     const res = await prisma.tag.create({
       data: {
